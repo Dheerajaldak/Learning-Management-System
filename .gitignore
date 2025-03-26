@@ -1,0 +1,35 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Node modules
+LMS_FRONTEND/node_modules/
+LMS_BACKEND/node_modules/
+
+# Environment variables
+LMS_BACKEND/.env
+LMS_FRONTEND/.env.local
+LMS_FRONTEND/.env.*.local
+LMS_BACKEND/.env
+LMS_BACKEND/.env.local
+LMS_BACKEND/.env.*.local
+
+# Build output
+LMS_FRONTEND/dist/
+LMS_BACKEND/dist/
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?

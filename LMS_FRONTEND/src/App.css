@@ -1,0 +1,41 @@
+
+/* company slide effect starts <Companies/> */
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-33%);
+  }
+}
+
+.companies-wrapper {
+  display: flex;
+  width: max-content;
+  animation: slide 20s linear infinite;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.overflow-hidden:hover .companies-wrapper {
+  animation-play-state: paused;
+}
+/* company slide effect ends */
+
+/* CSS animation for scrolling the logos */
+@keyframes marquee {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+  
+  .animate-marquee {
+    animation: marquee 25s linear infinite;
+  }
+  
+  
