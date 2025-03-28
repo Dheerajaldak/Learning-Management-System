@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const BASE_URL = "https://learning-management-system-dheeraj.vercel.app/api/v1";
+const BASE_URL = "https://learning-management-system-backend-knez.onrender.com/api/v1";
 
 const axiosInstance = axios.create();
 
