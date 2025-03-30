@@ -19,7 +19,11 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use(
   cors({
+<<<<<<< HEAD
     origin: process.env.FRONTEND_URL,
+=======
+    origin: "https://learning-management-system-dheeraj.vercel.app",
+>>>>>>> 96eb30dddeacf96ec0623c2981ea307da4ea029d
     credentials: true,
   })
 );
