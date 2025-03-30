@@ -19,7 +19,7 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use(
   cors({
-    origin: [process.env.FRONTEND_URL],
+    origin: process.env.FRONTEND_URL,
     credentials: true,
   })
 );
@@ -40,7 +40,7 @@ app.use("/api/v1", statsRouter )
 
 // Routes of 3 modules
 app.all("*", (req, res) => {
-  res.status(404).send("OOPS!! 404 page not found..");
+  res.status(404).send("OOPS LMS!! 404 page not found..");
 });
 
 app.use(errorMiddleware);

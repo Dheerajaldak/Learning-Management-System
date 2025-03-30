@@ -59,7 +59,7 @@ const Navbar = () => {
   }, [showDropdown, showSearch]);
 
   return (
-    <nav className="top-0 z-50 w-full py-4 lg:py-6 px-4 sm:px-8">
+    <nav className="top-0 z-50 w-11/12 lg:w-full py-4 lg:py-6 px-4 sm:px-8">
       <div className="h-6 container mx-auto flex items-center justify-between">
         <Link to="/" className="flex items-center">
           {/* Logo can be inserted here */}
