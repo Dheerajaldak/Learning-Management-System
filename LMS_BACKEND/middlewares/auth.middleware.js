@@ -7,10 +7,13 @@ const isLoggedIn = async (req, _res, next) => {
     return next(new AppError("Unauthenticated,🤢 please login again", 401));
   }
 
-  const userDetails = await jwt.verify(token, process.env.JWT_SECRET);
-
-  req.user = userDetails;
-  next();
+  try {
+    const userDetails = await jwt.verify(token, process.env.JWT_SECRET);
+    req.user = userDetails;
+    next();
+  } catch (error) {
+    return next(new AppError("Invalid or expired token", 401));
+  }
 };
 
 const authorizedRoles =
