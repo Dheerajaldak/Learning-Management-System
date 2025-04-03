@@ -25,13 +25,19 @@ function CourseDescription() {
       </HomeLayout>
     );
   }
+  const dummyBio =
+    `${state?.createdBy} is a seasoned educator with over 15 years of experience in the field. He is passionate about empowering students and fostering a love for learning. His expertise spans various disciplines, and he's known for his engaging teaching style.`;
+  const dummyQualifications =
+    "Master's Degree in Education, Certified Online Instructor, Published Author of 'Effective Teaching Strategies'";
+
 
   return (
+    
     <HomeLayout>
       <div className="min-h-screen pt-16 px-4 sm:px-8 md:px-16 lg:px-32 flex flex-col items-center justify-start bg-[#f4f7fa] dark:bg-gray-900 text-gray-700 dark:text-white">
         {/* Course Thumbnail and Info Section */}
         <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight text-neutral-900 dark:text-white mb-8">
-          <span className="">Course</span>
+          <span className="">Course</span>{" "}
           <span className="bg-clip-text text-transparent bg-gradient-to-r from-amber-500 via-amber-400 to-amber-600">
             Overview
           </span>
@@ -50,12 +56,12 @@ function CourseDescription() {
                 <p className="text-neutral-700 dark:text-white">
                   <span className="bg-clip-text font-bold text-transparent bg-gradient-to-r from-amber-500 via-amber-400 to-amber-600">
                     Total Lectures:
-                  </span>
+                  </span>{" "}
                   {state?.numbersOfLectures || "N/A"}
                 </p>
                 <p className="text-neutral-700 dark:text-white">
                   <span className="bg-clip-text font-bold text-transparent bg-gradient-to-r from-amber-500 via-amber-400 to-amber-600">
-                    Instructor:
+                    Instructor:{" "}
                   </span>
                   {state?.createdBy || "Not Available"}
                 </p>
@@ -68,9 +74,11 @@ function CourseDescription() {
                         state: { ...state },
                       })
                     }
-                    className="bg-yellow-500 text-lg rounded-md font-semibold px-4 py-2 md:px-6 md:py-3 w-full sm:w-3/4 lg:w-1/2 hover:bg-yellow-400 focus:outline-none transition ease-in-out duration-300 transform hover:scale-105 shadow-xl"
-                  >
-                    Watch Lectures
+                    className="px-4 py-2 md:px-6 md:py-3 lg:px-7 lg:py-3.5 rounded-lg bg-neutral-900 hover:bg-black text-white dark:bg-amber-500 dark:hover:bg-amber-600 dark:text-neutral-900 font-medium shadow hover:shadow-neutral-900/20 dark:hover:shadow-amber-500/20 flex items-center transition group whitespace-nowrap"
+                >
+                  <i className="bx bx-desktop mr-2 lg:mr-3 text-lg lg:text-xl group-hover:rotate-12 transition-transform"></i>
+                  <span>  Watch Lectures</span>
+                  
                   </button>
                 ) : (
                   <button
@@ -102,7 +110,7 @@ function CourseDescription() {
         {/* Course Syllabus Section */}
         <div className="mt-8 md:mt-12 w-full max-w-screen-lg text-center dark:bg-gray-800 bg-white p-6 md:p-8 rounded-lg shadow-lg">
           <h1 className="text-3xl md:text-4xl mb-6 font-extrabold tracking-tight text-neutral-900 dark:text-white">
-            <span className="">Course</span>
+            <span className="">Course</span>{" "}
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-amber-500 via-amber-400 to-amber-600">
               Syllabus
             </span>
@@ -110,33 +118,37 @@ function CourseDescription() {
         </div>
 
         {/* Instructor Info Section */}
-        <div className="mt-8 md:mt-12 w-full max-w-screen-lg text-center dark:bg-gray-800 bg-white p-6 md:p-8 rounded-lg shadow-lg">
-          <h1 className="text-3xl md:text-4xl lg:text-5xl mb-4 font-extrabold tracking-tight text-neutral-900 dark:text-white">
-            <span className="">Instructor</span>
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-amber-500 via-amber-400 to-amber-600">
-              Information
-            </span>
-          </h1>
-          <p className="text-lg md:text-xl text-neutral-700 dark:text-white">
-            Instructor Name: {state?.createdBy || "N/A"}
-          </p>
-          <p className="text-base md:text-lg text-neutral-700 dark:text-white">
-            About the Instructor: {state?.instructorBio || "No Bio Available"}
-          </p>
-          <p className="text-base md:text-lg text-neutral-700 dark:text-white">
-            Qualifications: {state?.instructorQualifications || "Not Available"}
-          </p>
-          <Link to="/contact">
-            <button className="px-4 py-2 md:px-6 md:py-3 lg:px-7 lg:py-3.5 rounded-lg bg-neutral-100 hover:bg-neutral-200 dark:bg-neutral-800 dark:hover:bg-neutral-700 border border-neutral-300 dark:border-neutral-700 text-neutral-900 dark:text-white font-medium flex items-center transition group whitespace-nowrap mt-4 md:mt-6">
-              <i className="bx bx-envelope mr-2 lg:mr-3 text-lg lg:text-xl opacity-70 group-hover:opacity-100 transition-opacity"></i>
-              <span>Contact Us</span>
-            </button>
-          </Link>
-        </div>
+        
+        <div className="mt-8 md:mt-12 w-full max-w-screen-lg mx-auto text-center dark:bg-gray-800 bg-white p-6 md:p-8 rounded-lg shadow-lg">
+      <h1 className="text-3xl md:text-4xl  mb-4 font-extrabold tracking-tight text-neutral-900 dark:text-white">
+        <span className="">Instructor</span>{' '}
+        <span className="bg-clip-text text-transparent bg-gradient-to-r from-amber-500 via-amber-400 to-amber-600">
+          Information
+        </span>
+      </h1>
+      <p className="text-lg md:text-xl text-neutral-700 dark:text-white">
+       <span className="bg-clip-text font-bold text-transparent bg-gradient-to-r from-amber-500 via-amber-400 to-amber-600">Instructor Name:</span>  {state?.createdBy || 'N/A'}
+      </p>
+      <p className="text-base md:text-lg text-neutral-700 dark:text-white">
+      <span className="bg-clip-text font-bold text-transparent bg-gradient-to-r from-amber-500 via-amber-400 to-amber-600">About the Instructor:</span>  {state?.instructorBio || dummyBio}
+      </p>
+      <p className="text-base md:text-lg text-neutral-700 dark:text-white">
+      <span className="bg-clip-text font-bold text-transparent bg-gradient-to-r from-amber-500 via-amber-400 to-amber-600">Qualifications:</span>   {state?.instructorQualifications || dummyQualifications}
+      </p>
+      <div className="mt-4 md:mt-6 flex justify-center">
+        <Link to="/contact">
+          <button className="px-4 py-2 md:px-6 md:py-3 lg:px-7 lg:py-3.5 rounded-lg bg-neutral-100 hover:bg-neutral-200 dark:bg-neutral-800 dark:hover:bg-neutral-700 border border-neutral-300 dark:border-neutral-700 text-neutral-900 dark:text-white font-medium flex items-center transition group whitespace-nowrap">
+            <i className="bx bx-envelope mr-2 lg:mr-3 text-lg lg:text-xl opacity-70 group-hover:opacity-100 transition-opacity"></i>
+            <span>Contact Us</span>
+          </button>
+        </Link>
+      </div>
+    </div>
 
         {/* Reviews and Ratings Section */}
-        <div className="mt-8 md:mt-12 w-full max-w-screen-lg text-center dark:bg-gray-800 bg-white p-6 md:p-8 rounded-lg shadow-lg">
-          <h1 className="text-3xl md:text-4xl lg:text-5xl mb-4 font-extrabold tracking-tight text-neutral-900 dark:text-white">
+
+        <div className="m-8 md:mt-12 w-full max-w-screen-lg text-center dark:bg-gray-800 bg-white p-6 md:p-8 rounded-lg shadow-lg">
+          <h1 className="text-3xl md:text-4xl mb-4 font-extrabold tracking-tight text-neutral-900 dark:text-white">
             <span className="">Reviews </span>
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-amber-500 via-amber-400 to-amber-600">
               & Ratings

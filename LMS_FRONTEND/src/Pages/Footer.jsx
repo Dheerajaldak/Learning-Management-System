@@ -80,7 +80,7 @@ const Footer = () => {
             <h3 className="text-lg font-semibold mb-4">Instructors</h3>
             <ul className="text-sm space-y-2"> {/* Added space-y-2 for spacing */}
               <li className="">
-                <Link to="/instructors" className="hover:text-gray-300">
+                <Link to="/contact" className="hover:text-gray-300">
                   Become an Instructor
                 </Link>
               </li>

@@ -25,7 +25,7 @@ router
 
 router
   .route("/:id")
-  .get(isLoggedIn, getLecturesByCourseId, authorizeSubscriber) //also give - authorizeSubscriber
+  .get(isLoggedIn, authorizeSubscriber, getLecturesByCourseId) //also give - authorizeSubscriber
   .put(isLoggedIn, authorizedRoles("ADMIN"), updateCourse)
   .delete(isLoggedIn, removeCourse)
   .post(

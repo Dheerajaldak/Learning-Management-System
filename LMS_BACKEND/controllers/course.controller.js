@@ -21,11 +21,7 @@ const getAllCourses = async function (req, res, next) {
 const getLecturesByCourseId = async function (req, res, next) {
   try {
     const { id } = req.params;
-    // console.log("id:  " + id);
-
     const course = await Course.findById(id);
-    // console.log("course :  "+course);
-
     if (!course) {
       return next(new AppError("Invalid course id", 400));
     }

@@ -191,8 +191,10 @@ const CourseList = () => {
                 ))}
               </div>
             </MenuItems>
+          
           </Menu>
         </div>
+        
 
         {/* Course Cards Section */}
         <div className="px-0 sm:px-20">
